@@ -1,0 +1,318 @@
+@font-face { font-family: Monserat; src: url('../data/Inter.ttf'); } 
+
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    background-color: #fefefe ;
+  }
+  /*#348f6c*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #212121;
+    overflow-x: hidden; 
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 18px 32px; 
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .img_wrap {
+    border-style: solid;
+  }
+
+  .img_wrap img {
+    width: 50%;
+    position:absolute;
+
+    height: 30%;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+    font-size: 30px;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 20px;}
+    .sidenav a {font-size: 18px;}
+    .sidenav h1 { font-size: 41px;}
+  }
+
+  
+.zag{
+    color: white;
+    margin-left: 30px;
+    font-size: 40px;
+    position: absolute;
+    margin-top: 220%;
+
+}   
+
+#end_of{
+  transition: 0.5s;
+}
+
+.my_units{
+  margin-left: 3%;
+  position: absolute;
+  width: 150px;
+  margin-top: -1.8%;
+  font-family: Monserat;
+}
+/*filter*/
+
+.name_e{
+  margin-right: 8%;
+  margin-left: 7%;
+  font-size: 25px;
+  font-family: Monserat;
+  color: rgba(0, 0, 0, 0.5); 
+}
+
+.coor_e{
+  margin-left: 3%;
+  margin-right: 10%;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5); 
+  font-family: Monserat;
+}
+
+.coor{
+  margin-left: 22%;
+  margin-top: 1%;
+  position: absolute;
+  width: 10;
+}
+
+.coor1{
+  font-size: 25px;
+  color: rgba(0, 0, 0); 
+  font-family: Monserat;
+  margin-left: 0%;
+  width: 20%;
+}
+
+.water_bar{
+  position: absolute;
+  font-size: 25px;
+  font-family: Monserat;
+  margin-left: 59%;
+  padding-top: 1%;
+}
+
+.water_bar_tag{
+  font-size: 20px;
+  margin-top: 2.5%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Monserat;
+  position: absolute;
+  margin-left: 59%;
+}
+
+.status_e{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5); 
+  font-family: Monserat;
+  margin-left: 7%;
+}
+
+.water_e{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5); 
+  font-family: Monserat;
+  margin-left: 6.5%;
+}
+
+.coor2{
+  font-size: 20px;
+  margin-top: 2.5%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Monserat;
+  position: absolute;
+  
+}
+
+.rotate_e{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5); 
+  font-family: Monserat;
+  margin-left: 8%;
+
+}
+
+.rotate{
+  position: absolute;
+  font-size: 25px;
+  font-family: Monserat;
+  margin-left: 49%;
+  padding-top: 1%;
+}
+
+.rotate_tag{
+  font-size: 20px;
+  margin-top: 2.5%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Monserat;
+  position: absolute;
+  margin-left: 49%;
+}
+
+#time{
+  transition: 0.5s;
+}
+
+.work_time_tag{
+  font-size: 20px;
+  margin-top: 2.5%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Monserat;
+  position: absolute;
+  margin-left: 35%;
+}
+
+.time_e{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5); 
+  font-family: Monserat;
+  margin-left:  -3%;
+}
+
+.status{
+  position: absolute;
+  font-size: 25px;
+  font-family: Monserat;
+  margin-left: 69%;
+  padding-top: 1%;
+}
+
+.edit{
+  position: absolute;
+  height: 9%;
+  width: 6%;
+  background-color: #F4F3F0;
+  margin-left: 88.5%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.edit:hover{
+  width: 9%;
+  transition: 0.5s;
+}
+
+.edit_t{
+  font-family: Monserat;
+  font-size: 25px;
+  margin-top: 5%;
+}
+
+.status_tag{
+  font-size: 20px;
+  margin-top: 2.5%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Monserat;
+  position: absolute;
+  margin-left: 69%;
+}
+
+
+
+.work_time{
+  position: absolute;
+  font-size: 25px;
+  font-family: Monserat;
+  margin-left: 35%;
+  padding-top: 1%;
+}
+
+
+/*filter*/
+.filter{
+  margin-right: 10%;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Monserat;
+  font-size: 25px;
+}
+
+.name_cont{
+  font-size: 25px;
+  font-family: Monserat;
+  position: absolute;
+  margin-left: 6.2%;
+  padding-top: 1%;
+}
+
+.name_cont_tag{
+  font-size: 20px;
+  margin-top: 2.5%;
+  margin-left: 6.2%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Monserat;
+  position: absolute;
+}
+
+.container{
+
+  width: 90%;
+  margin-top: 2%;
+  margin-left: 3%;
+  min-height: 90px;
+  background: #F4F3F0;
+  border-radius: 10px;
+
+}
+
+.circle11{
+  height: 7%;
+  margin-left: 1%;
+  margin-top: 0.6%;
+  width: 3.6%;
+  border-radius: 90%;
+  z-index: 88;
+  position: absolute;
+  background-color: #D9D9D9;
+}
+
+.sort{
+  width: 90%;
+  margin-top: 3%;
+  margin-left: 6%;
+  min-height: 30px;
+}
+
+.container1{
+  width: 90%;
+  margin-top: 2%;
+  margin-left: 3%;
+  min-height: 90px;
+  background: #F4F3F0;
+  border-radius: 10px;
+}

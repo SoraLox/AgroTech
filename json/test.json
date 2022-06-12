@@ -1,0 +1,49 @@
+{
+    "clientId": "kazanka",
+    "contractVer": "1.0",
+    "current":{
+        "acc1":{
+            "x": 11449,
+            "y": -6428,
+            "z": -3584
+        },
+        "geo0":{
+            "lat": 56.0202710,
+            "lon": 49.6658941,
+            "alt": 96.3069421
+        },
+        "geo1":{
+            "lat": 56.0212710,
+            "lon": 49.6658941,
+            "alt": null
+        },
+        "mag1":{
+            "angle": 310.0,
+            "x": -2.8,
+            "y": -11.48,
+            "z": 6.60
+        }
+    },
+    "hwVer": "1.0",
+    "isWorking": true,
+    "schema": "kazanka",
+    "start":{
+        "geo0":{
+            "lat":56.0202710,
+            "lon":49.6658941,
+            "alt":100
+        },
+        "geo1":{
+            "lat":56.0202710,
+            "lon":49.6658941,
+            "alt":100
+        }
+    },
+    "swVer": "1.0",
+    "thingId": "device2",
+    "timeStamp": 1653554371967,
+    "type": "telemetry",
+    "valve": false,
+    "waterPressure": 6.42633594732095,
+    "workTime": 36000000
+}

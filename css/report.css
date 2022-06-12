@@ -1,0 +1,252 @@
+.line1{
+    margin-top: 4%;
+    text-align: center;
+
+}
+.line{
+    text-align: center;
+}
+.row{
+    margin: 0% 0% 3% 3.5%;
+    display: inline-block;
+
+}
+.block{
+    background-color: rgba(244, 243, 240, 0.8);
+    width: 360px;
+    border-radius: 3px;
+    padding: 5px 9px 14px 9px;
+ 
+}
+.main-block{
+    margin: 12px;
+    text-align: left;
+    min-width: 200px;
+}
+.name-block{
+font-family: 'Monserat';
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+margin-top: -70px;
+position: absolute;
+line-height: 30px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.9);
+}
+.name-type{
+    font-family: 'Monserat';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+position: absolute;
+margin-top: -30px;
+line-height: 21px;
+text-align: center;
+
+color: rgba(28, 28, 28, 0.5);
+}
+
+.backg-img-block-img{
+    border-radius: 38px;
+}
+
+.backg-img-block{
+    height: 76px;
+    width: 76px;
+    
+    background: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    overflow: hidden;
+}
+.name-block-div{
+    display: inline-block;
+}
+
+.coordinates{
+    width: 340px;
+    height: 109px;
+    margin: auto;
+    margin-bottom: 4px;
+    background: rgba(228, 224, 224, 0.8);
+    border-radius: 4px;
+    min-width: 280px;
+    position: relative;
+}
+.name-cord{
+    margin: 5px;
+    padding: 10px;
+    font-family: 'Monserat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.9);
+}
+.cords{
+    width: 340px;
+    height: 109px;
+    margin: auto;
+    font-family: Monserat;
+    background: rgba(228, 224, 224, 0.8);
+    border-radius: 4px;
+    min-width: 280px;
+    position: relative;
+    font-size: 22px;
+
+}
+
+
+.time{
+    width: 340px;
+height: 109px;
+margin: auto;
+background: rgba(228, 224, 224, 0.8);
+border-radius: 4px;
+min-width: 180px;
+position: relative;
+top: -12px;
+}
+
+.element{
+    margin-right: 80px;
+    margin-top: 1%; 
+    display:inline-block;
+}
+
+
+.list-time{
+    margin-left: 60px;
+    font-family: 'Monserat';
+font-style: normal;
+font-weight: 600;
+width: 200px;
+font-size: 22px;
+line-height: 27px;
+text-align: center;
+margin-top: 17px;
+color: rgba(229, 13, 13, 0.685);
+}
+.turn{
+    width: 340px;
+height: 119px;
+text-align: left;
+background: rgba(228, 224, 224, 0.8);
+border-radius: 4px;
+margin: auto;
+
+}
+.name-turn{
+    font-family: 'Monserat';
+font-style: normal;
+font-weight: 600;
+font-size: 23px;
+line-height: 24px;
+padding:20px ;
+padding-left: 90px;
+color: #000000;
+}
+
+.edg{
+    font-family: Monserat;
+    font-size: 20px;
+    margin-left: 28%;
+    width: 200px;
+}
+
+.list-turn{
+    font-family: 'Monserat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+
+color: rgba(0, 0, 0, 0.8);
+margin: 18px 0px 0px 41px;
+}
+
+.two-blocks{
+    margin: auto;
+    text-align: center;
+}
+
+@font-face { font-family: Monserat; src: url('../data/Inter.ttf'); } 
+
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    background-color: #fefefe ;
+  }
+  /*#348f6c*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #212121;
+    overflow-x: hidden; 
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+
+  .sidenav a {
+    padding: 8px 8px 18px 32px; 
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .img_wrap {
+    border-style: solid;
+  }
+
+  .img_wrap img {
+    width: 50%;
+    position:absolute;
+
+    height: 30%;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+    font-size: 30px;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 20px;}
+    .sidenav a {font-size: 18px;}
+    .sidenav h1 { font-size: 41px;}
+  }
+
+  
+.zag{
+    color: white;
+    margin-left: 30px;
+    font-size: 40px;
+    position: absolute;
+    margin-top: 220%;
+
+}   
+

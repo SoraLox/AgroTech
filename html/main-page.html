@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="../data/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" href="../css/main.css">
+<body>
+  <!--\/\/MAP\/\/-->
+  <script>
+    lat = 56.0202710
+    lon = 59.6658941
+    alt = 96.3069
+    radius = 300.0
+
+    const citymap = {
+      chicago: {
+        center: { lat: lat, lng: lon },
+        population: 270,
+      }
+    };
+    
+    function initMap() {
+      // Create the map.
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: { lat: lat, lng: lon },
+        mapTypeId: "terrain",
+      });
+    
+      // Construct the circle for each value in citymap.
+      // Note: We scale the area of the circle based on the population.
+      for (const city in citymap) {
+        // Add the circle for this city to the map.
+        const cityCircle = new google.maps.Circle({
+          strokeColor: "rgba(0, 0, 0, 0.7)",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "rgba(0, 0, 0, 0.7)",
+          fillOpacity: 0.35,
+          map,
+          center: citymap[city].center,
+          radius: Math.sqrt(citymap[city].population) * 100,
+        });
+      }
+    }
+    
+    window.initMap = initMap;
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <!--/\/\MAP/\/\-->
+<div id="mySidenav" class="sidenav">
+    
+    
+    <a href="main-page.html">Map</a>
+    <a href="units.html">Units</a>
+    <a href="#">Analitics</a>
+    <a href="reports.html">Report</a>
+    <h1 class="zag">AgroTech</h1>
+</div> 
+
+<div id="main">
+  <div class=container1>
+  <span style="font-size:30px;cursor:pointer" onclick="checkOpen()">&#9776; </span>
+  </div>
+
+
+  <div id="map"></div>
+
+  <div class="main_div_name" id="main_div_name">
+    <!--name: name, number-->
+    <div class="eliplce"><img class="image" src="../icons/map.png" alt=""></div>
+    <h1 class="name_tag" id="nameTag">Kazanka 7 - 1</h1>
+  </div>
+
+  <div class="main_div_description" id="main_div_description">
+    <!--description: direction, speed, work time, type-->
+    <div id="circle"><div class="strel"></div></div></div>
+    <div class="pod_circle"><span class="pod_circle_tag">45%  |  135°</span></div>
+    <div class="pod_tg_tag"><span class="pod_tg_tag_tag">irrigation percentage</span></div>
+    <div id="desc1" class="desc1"><h1 class="desc1h1">1.203 m\s</h1><h3 class="desc1h3">speed</h3></div>
+    <div id="desc2" class="desc2"><h1 class="desc2h1">lon: 56.8954</h1><h1 class="desc2h1">len: 76.8927</h1><h3 class="desc2h3">position</h3></div>
+    <div id="desc3" class="desc3"><h1 class="desc3h1">8 mm</h1><h3 class="desc3h3">regular</h3></div>
+
+    <div id="desc4" class="desc4"><h1 class="desc4h1">6.432 bar</h1><h3 class="desc4h3">water pressure</h3></div>
+    
+    <div id="desc5" class="desc5"><h1 class="desc5h1">3h 34m 03s</h1><h3 class="desc5h3">work time</h3></div>
+  </div>
+
+  <div class="main_div_messages" id="main_div_messages">
+    <h1 class="h1m">Messages:</h1>
+    <div class="mdiv" id="mdiv">
+      <h1 class="mdivh1">Start</h1> 
+      <p class="mdivp">Kazanka 7-1 started watering the area</p>
+    </div>
+    <!--messages: comments--> 
+  </div>
+
+  <div class="main_div_errors" id="main_div_errors">
+    <h1 class="errorh1">Errors:</h1>
+    
+    <!--messages: comments--> 
+  </div>
+  
+</div>
+
+
+
+<script>
+var obj = JSON.parse('../json/test.json');
+console.log(obj)
+</script>
+
+
+<script>
+    isOpened=false
+    function checkOpen(){
+        if(isOpened==false){
+            openNav()
+        }
+        else{
+            closeNav()
+        }
+    }
+    
+    
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("main_div_description").style.marginLeft = "42%";
+  document.getElementById("main_div_description").style.width = "55%"
+  document.getElementById("main_div_name").style.marginLeft = "42%";
+  document.getElementById("main_div_name").style.width = "55%";
+  document.getElementById("main_div_messages").style.marginLeft = "49.5%"
+  document.getElementById("main_div_messages").style.width = "20%"
+  document.getElementById("mdiv").style.width = "90%"
+  
+  
+  
+  isOpened = true
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("main_div_description").style.marginLeft = "37%";
+  document.getElementById("main_div_description").style.width = "60%";
+  document.getElementById("main_div_name").style.marginLeft = "37%";
+  document.getElementById("main_div_name").style.width = "60%";
+  document.getElementById("main_div_messages").style.marginLeft = "37%"
+  document.getElementById("main_div_messages").style.width = "30%"
+  document.getElementById("mdiv").style.width = "90%"
+  
+  
+  isOpened = false
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"defer></script>
+   
+</body>
+</html> 

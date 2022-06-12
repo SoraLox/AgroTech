@@ -1,0 +1,124 @@
+@font-face { font-family: Monserat; src: url('../data/Monserat.ttf'); } 
+
+.login_div {
+    background: #212121ea;
+    /* centred div */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 00px;
+    width: 40%;
+    height: 60%;
+}
+
+.video{
+    width: 100%;
+
+    z-index: 0;
+    margin: 0px;
+    position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+body{
+    background-image: url(../data/field2_bg.jpg);
+    background-size:110% ;
+    background-position-y: 00%;
+    font-family: 'Monserat';
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link{
+    color: white;
+}
+
+.text-center{
+	color:#fff;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
+}
+
+.box{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.89);
+	border-radius:3px;
+	padding:70px 100px;
+}
+
+.input-container{
+    font-family: Monserat;
+    font-style: normal;
+    
+	position:relative;
+	margin-bottom:50px;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 500%);   
+}
+
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+    
+	transition: all 0.5s ease-in-out;
+}
+
+.input-container input{ 
+    
+    border:0;
+    border-bottom:1px solid #FFF;  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color:#fff;
+}
+
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #616161;   	
+}
+
+
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover{
+    
+    background-color: #3333337a;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
+}
+
+
+
