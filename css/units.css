@@ -73,8 +73,64 @@ body {
     font-size: 40px;
     position: absolute;
     margin-top: 220%;
-
 }   
+
+.polxi{
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  margin-left: 10%;
+
+}
+
+.dots_div{
+  height: 100%;
+  width: 90%;
+  top: 50%;
+  margin-left: 05%;
+}
+
+.dots:hover{
+  background-color: #d9d9d9ab;
+}
+
+#dots{
+  transition: 1s;
+}
+#dots1{
+  transition: 1s;
+}
+#dots2{
+  transition: 1s;
+}
+#dots3{
+  transition: 1s;
+}
+#dots4{
+  transition: 1s;
+}
+#dots5{
+  transition: 1s;
+}
+#dots6{
+  transition: 1s;
+}
+#dots7{
+  transition: 1s;
+}
+.dots{
+  padding: 6px;
+  background-color: #D9D9D9;
+  font-family: Monserat;
+  font-size: 30px;
+  position: absolute;
+  margin-left: 82%;
+  margin-top: 010px;
+  /* padding-top: 1.2%; */
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
 
 #end_of{
   transition: 0.5s;
