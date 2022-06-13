@@ -5,7 +5,7 @@ machine status and availability. Also available is a report window, where you ca
 
 Status of the mashine window
 
-![Screenshot 2022-06-12 231604](https://user-images.githubusercontent.com/86309488/173291275-f1dc981f-cf0f-4449-82cc-651618f8aabf.png)
+![image](https://user-images.githubusercontent.com/86309488/173431446-173ab432-1a4e-46ff-9d09-2d04c9c107a2.png)
 
 Screen when u can see all available and unavailable units
 
