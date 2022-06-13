@@ -86,6 +86,9 @@ line-height: 18px;
 color: #000000;
 }
 
+#element{
+    transition: 0.5s;
+}
 
 .time{
     width: 182px;

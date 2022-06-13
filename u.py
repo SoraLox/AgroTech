@@ -2,6 +2,8 @@ import paho.mqtt.client as mqttClient
 import time
 import ssl
 
+
+
 def on_connect(client, userdata, flags, rc):
   
     if rc == 0:
@@ -16,8 +18,11 @@ def on_connect(client, userdata, flags, rc):
         print("Connection failed")
   
 def on_message(client, userdata, message):
+    f = open('jsondata.txt', 'w+')
     print("Message received: "  + message.payload.decode("utf-8") )
-  
+    f.write(str(message.payload.decode("utf-8")))
+    f.close()
+    
 Connected = False   #global variable for the state of the connection
   
 broker_address= "mqtt.cloud.yandex.net"  #Broker address
@@ -50,3 +55,4 @@ except KeyboardInterrupt:
     print("exiting")
     client.disconnect()
     client.loop_stop()
+    
