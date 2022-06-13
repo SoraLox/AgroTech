@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech</title>
+    <link rel="stylesheet" href="../css/units.css">
+    <link rel="stylesheet" href="../css/analitics.css">
+
+</head>
+<body class="bg-fon">
+    <div id="mySidenav" class="sidenav">
+        <a href="#">Map</a>
+        <a href="../html/units.html">Units</a>
+        <a href="#">Noter</a>
+        <a href="#">Analitics</a>
+        <a href="#">Report</a>
+        <h1 class="zag">AgroTech</h1>
+    </div> 
+    
+    <div id="main">
+        <DIV>
+            <span style="font-size:30px;cursor:pointer" onclick="checkOpen()">&#9776; </span>
+            <div class="my_units">
+                <h1 class="my_units">My units</h1>
+            </div>
+        </DIV>
+        <div class="info-body">
+            <div class="name-inf">Информация:</div>
+            <div class="vater-inf">
+                <div class="head-vat">Использование воды:</div>
+                <div class="vat-time">
+                    <div class="time-per">За месяц - 45.678 м³</div>
+                    <div class="time-per"> За день - 3.672 м³</div>
+                </div></div>
+            
+            <div class="ver-inf">
+                <div class="head-vat">Версия ситемы</div>
+                <div class="new-ver">
+                    Последняя  -  6шт. (75%)
+                </div>
+                <div class="last-ver">
+                    <div class="last-ver-name">Остальные:</div>
+                    <div class="last-ver-type">0.5 вер.  -  1шт. (13%)</div>
+                    <div class="last-ver-type">0.3 вер.  -  1 шт. (12%)</div>
+
+                </div>
+            </div>
+            <div class="errors-inf">
+                <div class="errors-name">Поломки техники:</div>
+                <div class="count-err">
+                    <div>Кол-во за месяц:</div>
+                    <div>3 раз.</div>
+                </div>
+                <div class="count-ex">
+                    <div class="name-last-err">Последние поломки:</div>
+                    <div class="list-err">
+                        <div>Каталка 7-1  -  09.06.22</div>
+                        <div>Люк 4-5  -  02.06.22</div>
+                        <div>Каталка 7-3  -  26.05.22</div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-inf">
+                <div class="time-list">
+                    <div class="name-time-list">Время работы:</div>
+                    <div class="text-time-list">472ч 45м 36с</div>
+                </div>
+                <div class="time-list">
+                    <div class="name-time-list">Время простоя:</div>
+                    <div class="text-time-list">854ч 32м 22с</div>
+                </div>
+                <div class="time-list1">
+                    <div class="name-time-list">Потеря из-за поломок:</div>
+                    <div class="text-time-list">34ч 33м 56с</div>
+                </div>
+            </div>
+            <div class="rep-inf">
+                <div class="name-rep">Отчёты за месяц:</div>
+                <div class="rep-div">
+                    <div class="name-rep-div-1">Ошибки  -  4шт.</div>
+                    <div class="text-rep-div">Поломки - 3шт.</div>
+                    <div class="text-rep-div">Посылки?</div>
+                </div>
+                <div class="rep-div">
+                    <div class="name-rep-div">Сообщения  -  34шт.</div>
+                    <div class="text-rep-div">Отчёты - 25шт.</div>
+                    <div class="text-rep-div">Вызовы - 9шт.</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="body-diog"></div>
+        <div class="answers">
+            <div class="answ1">
+                <div class="text-answ">Как посмотреть расширенную информацию о технике?</div>
+                <img src="../data/arrow down.png" class="arrow"  width: 20px>
+            </div>
+            <div class="answ">
+                <div class="text-answ">Как посмотреть расширенную информацию о технике?</div>
+                <img src="../data/arrow down.png" class="arrow"  width: 20px>
+            </div>
+            <div class="answ">
+                <div class="text-answ">Как посмотреть расширенную информацию о технике?</div>
+                <img src="../data/arrow down.png" class="arrow"  width: 20px>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <script>
+        isOpened=false
+        function checkOpen(){
+            if(isOpened==false){
+                openNav()
+            }
+            else{
+                closeNav()
+            }
+        }
+        
+        
+    function openNav() {
+      document.getElementById("end_of").style.marginRight = "5%";
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.getElementById("time").style.marginLeft = "4%";  
+      document.body.style.backgroundColor = "rgba(0,0,0,0)";
+      isOpened = true
+    }
+    
+    function closeNav() {
+      document.getElementById("end_of").style.marginRight = "10%";
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.getElementById("time").style.marginLeft = "-4%";  
+
+        
+      document.body.style.backgroundColor = "white";
+      isOpened = false
+    }
+</script>    
+
+</body>
+
+</html>
