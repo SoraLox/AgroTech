@@ -13,4 +13,4 @@ Screen when u can see all available and unavailable units
 
 Report screen
 
-![image](https://user-images.githubusercontent.com/86309488/173294136-3b3e3068-f214-4556-953c-e8f493e97405.png)
+![image](https://user-images.githubusercontent.com/86309488/173304344-cc31a2d9-9f4d-48ae-ae58-188d2de5d046.png)
