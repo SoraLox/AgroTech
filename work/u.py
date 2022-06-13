@@ -3,46 +3,44 @@ import time
 import ssl
 
 
-
 def on_connect(client, userdata, flags, rc):
-  
     if rc == 0:
-  
         print("Connected to broker")
-  
-        global Connected                #Use global variable
-        Connected = True                #Signal connection 
-  
+        # succes connection
+        global Connected
+        Connected = True
     else:
-  
         print("Connection failed")
   
 def on_message(client, userdata, message):
     f = open('jsondata.txt', 'w+')
+    
     print("Message received: "  + message.payload.decode("utf-8") )
+    
     f.write(str(message.payload.decode("utf-8")))
     f.close()
+    # file has been updated
     
-Connected = False   #global variable for the state of the connection
+Connected = False
   
-broker_address= "mqtt.cloud.yandex.net"  #Broker address
-port = 8883                         #Broker port
-user = "aresmv64htqk8lkmqr61"                    #Connection username
-password = "ICLinnocamp2022"            #Connection password
-  
-client = mqttClient.Client("Python")               #create new instance
-client.username_pw_set(user, password=password)    #set username and password
-client.on_connect= on_connect                      #attach function to callback
-client.on_message= on_message                      #attach function to callback
+broker_address= "mqtt.cloud.yandex.net"
+port = 8883
+icluser = "aresmv64htqk8lkmqr61"
+iclinno = "ICLinnocamp2022"
+
+client = mqttClient.Client("Python")
+client.username_pw_set(icluser, iclinno=iclinno)
+client.on_connect= on_connect
+client.on_message= on_message
   
 client.tls_set(r"C:\Users\Yowie\Downloads\rootCA.crt", tls_version=ssl.PROTOCOL_TLSv1_2)
 client.tls_insecure_set(True) 
   
-client.connect(broker_address, port=port)          #connect to broker
+client.connect(broker_address, port=port)
+
+client.loop_start()
   
-client.loop_start()        #start the loop
-  
-while Connected != True:    #Wait for connection
+while Connected != True:
     time.sleep(0.1)
   
 client.subscribe("$devices/are9gnqohp4npug37mbs/events/raw")
