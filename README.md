@@ -10,3 +10,7 @@ Status of the mashine window
 Screen when u can see all available and unavailable units
 
 ![image](https://user-images.githubusercontent.com/86309488/173291358-9331cf94-bc3c-424c-8755-4cd98a7889ec.png)
+
+Report screen
+
+![image](https://user-images.githubusercontent.com/86309488/173294136-3b3e3068-f214-4556-953c-e8f493e97405.png)
