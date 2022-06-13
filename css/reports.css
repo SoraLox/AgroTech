@@ -90,6 +90,10 @@ color: #000000;
     transition: 0.5s;
 }
 
+.chart_div{
+    margin-left: 300px;
+}
+
 .time{
     width: 182px;
 height: 109px;

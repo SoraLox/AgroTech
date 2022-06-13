@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+      
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '');
+        data.addColumn('number', '');
+        
+        data.addRows([
+          ['', 73],
+          ['', 27]
+        ]);
+
+        // Set chart options
+        var options = {'width':350,
+                      colors: ['#3c3c3c', '#5d5d5d'],
+                      'backgroundColor': "#f9f9f9",
+                      legend: 'none',
+                       'height':350};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script> 
   <link rel="shortcut icon" href="../data/logo.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -8,22 +44,22 @@
 <body>
   <!--\/\/MAP\/\/-->
   <script>
-    lat = 56.0202710
-    lon = 59.6658941
+    lat = 55.91366590002343
+    lon = 49.284886150709525
     alt = 96.3069
-    radius = 300.0
+    radius = (59.004496608029584 - lat) * 2
 
     const citymap = {
       chicago: {
         center: { lat: lat, lng: lon },
-        population: 270,
+        population: radius,
       }
     };
     
     function initMap() {
       // Create the map.
       const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
+        zoom: 15,
         center: { lat: lat, lng: lon },
         mapTypeId: "terrain",
       });
@@ -80,12 +116,13 @@
     <div class="pod_circle"><span class="pod_circle_tag">45%  |  135°</span></div>
     <div class="pod_tg_tag"><span class="pod_tg_tag_tag">irrigation percentage</span></div>
     <div id="desc1" class="desc1"><h1 class="desc1h1">1.203 m\s</h1><h3 class="desc1h3">speed</h3></div>
-    <div id="desc2" class="desc2"><h1 class="desc2h1">lon: 56.8954</h1><h1 class="desc2h1">len: 76.8927</h1><h3 class="desc2h3">position</h3></div>
+    <div id="desc2" class="desc2"><h1 class="desc2h1" id="desc2h1">lon: 56.8954</h1><h1 class="desc2h1">len: 76.8927</h1><h3 class="desc2h3">position</h3></div>
     <div id="desc3" class="desc3"><h1 class="desc3h1">8 mm</h1><h3 class="desc3h3">regular</h3></div>
-
     <div id="desc4" class="desc4"><h1 class="desc4h1">6.432 bar</h1><h3 class="desc4h3">water pressure</h3></div>
-    
+    <div id="chart_div" class="chart_div" style="margin-left: 1400px;margin-top:-400px; position:absolute"></div>
+
     <div id="desc5" class="desc5"><h1 class="desc5h1">3h 34m 03s</h1><h3 class="desc5h3">work time</h3></div>
+    
   </div>
 
   <div class="main_div_messages" id="main_div_messages">
@@ -108,8 +145,7 @@
 
 
 <script>
-var obj = JSON.parse('../json/test.json');
-console.log(obj)
+  
 </script>
 
 
@@ -124,6 +160,8 @@ console.log(obj)
         }
     }
     
+
+    
     
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -135,6 +173,7 @@ function openNav() {
   document.getElementById("main_div_messages").style.marginLeft = "49.5%"
   document.getElementById("main_div_messages").style.width = "20%"
   document.getElementById("mdiv").style.width = "90%"
+  document.getElementById("desc2h1").textContent = "lon: 57.34322"
   
   
   
@@ -151,6 +190,8 @@ function closeNav() {
   document.getElementById("main_div_messages").style.marginLeft = "37%"
   document.getElementById("main_div_messages").style.width = "30%"
   document.getElementById("mdiv").style.width = "90%"
+  document.getElementById("desc2h1").textContent = "lon: 57.84322"
+
   
   
   isOpened = false
