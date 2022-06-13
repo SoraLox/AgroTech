@@ -40,6 +40,9 @@ def normalize_angle(bearingAngle):
     
 while True:
     result = calc_endpoint(start_lat, start_lon, start_angle, machine_dist)
+    f = open('work/radius.txt', 'w+')
+    f.write(str(result))
+    f.close()
     print(result)
     time.sleep(5)
     start_angle+=1

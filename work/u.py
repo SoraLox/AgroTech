@@ -35,7 +35,7 @@ client.on_message= on_message
   
 client.tls_set(r"C:\Users\Yowie\Downloads\rootCA.crt", tls_version=ssl.PROTOCOL_TLSv1_2)
 client.tls_insecure_set(True) 
-  
+
 client.connect(broker_address, port=port)
 
 client.loop_start()

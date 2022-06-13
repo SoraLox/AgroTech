@@ -85,6 +85,14 @@ body {
   transition: 0.5s;
 }
 
+.chart_div{
+  margin-left: 1400px;
+  margin-top:-410px;
+  position:absolute;
+  height: 400px;
+  z-index: 2;
+}
+
 #map:hover{
   border-radius: 0px;
   box-shadow: 0 0 30px #212121ea;
@@ -110,6 +118,7 @@ body {
 
 #main_div_descriprion{
   transition: 0.5s;
+  z-index: -2;
 }
 
 .main_div_description{
@@ -120,11 +129,12 @@ body {
   width: 60%;
   height: 60%;
   min-height: 420px;
+  z-index: 1;
   background: rgba(249, 249, 249);
   border-radius: 5px;
 }
 .desc1h1{
-  margin-top: -270%;
+  margin-top: -300%;
   margin-left: -70%;
   font-family: 'Monserat';
   font-style: normal;
@@ -170,6 +180,10 @@ color: rgba(0, 0, 0, 0.9);
   color: rgba(0, 0, 0, 0.9);
   }
 
+#chart_div{
+  transition: 0.5s;
+}
+
 .desc2h3{
   
 font-family: 'Monserat';
@@ -191,6 +205,7 @@ color: rgba(0, 0, 0, 0.6);
   position: absolute;
   font-family: Monserat;
   margin-left: 64%;
+  z-index: 1;
   position: absolute;
   margin-top: -280px;
 }
