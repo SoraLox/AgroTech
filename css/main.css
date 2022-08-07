@@ -1,78 +1,86 @@
-@font-face { font-family: Monserat; src: url('../data/Inter.ttf'); } 
-
+@font-face {
+  font-family: Monserat;
+  src: url("../data/Inter.ttf");
+}
 
 body {
-    font-family: "Lato", sans-serif;
-    transition: background-color .5s;
-    background-color: rgb(217, 217, 217);
-  }
+  font-family: "Lato", sans-serif;
+  transition: background-color 0.5s;
+  background-color: rgb(217, 217, 217);
+}
 
-  /*#348f6c*/
+/*#348f6c*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #212121;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 18px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.img_wrap {
+  border-style: solid;
+}
+
+.img_wrap img {
+  width: 50%;
+  position: absolute;
+
+  height: 30%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  font-size: 30px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
   .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #212121;
-    overflow-x: hidden; 
-    transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 20px;
   }
-  
   .sidenav a {
-    padding: 8px 8px 18px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
+    font-size: 18px;
   }
+  .sidenav h1 {
+    font-size: 41px;
+  }
+}
 
-  .img_wrap {
-    border-style: solid;
-  }
-
-  .img_wrap img {
-    width: 50%;
-    position:absolute;
-
-    height: 30%;
-    object-fit: cover;
-    object-position: 0 0;
-  }
-
-  .sidenav a:hover {
-    color: #f1f1f1;
-    font-size: 30px;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 20px;}
-    .sidenav a {font-size: 18px;}
-    .sidenav h1 { font-size: 41px;}
-  }
-
-.zag{
-    color: white;
-    margin-left: 30px;
-    font-size: 40px;
-    position: absolute;
-    margin-top: 220%;
+.zag {
+  color: white;
+  margin-left: 30px;
+  font-size: 40px;
+  position: absolute;
+  margin-top: 220%;
 }
 
 #map {
@@ -85,25 +93,25 @@ body {
   transition: 0.5s;
 }
 
-.chart_div{
+.chart_div {
   margin-left: 1400px;
-  margin-top:-410px;
-  position:absolute;
+  margin-top: -410px;
+  position: absolute;
   height: 400px;
   z-index: 2;
 }
 
-#map:hover{
+#map:hover {
   border-radius: 0px;
   box-shadow: 0 0 30px #212121ea;
   transition: 0.5s;
 }
 
-#main_div_name{
+#main_div_name {
   transition-duration: 0.5s;
 }
 /*1488*/
-.main_div_name{
+.main_div_name {
   left: 50%;
   margin-left: 37%;
   width: 60%;
@@ -114,14 +122,12 @@ body {
   border-radius: 5px;
 }
 
-
-
-#main_div_descriprion{
+#main_div_descriprion {
   transition: 0.5s;
   z-index: -2;
 }
 
-.main_div_description{
+.main_div_description {
   transition: 0.5s;
   left: 50%;
   margin-left: 37%;
@@ -133,74 +139,69 @@ body {
   background: rgba(249, 249, 249);
   border-radius: 5px;
 }
-.desc1h1{
+.desc1h1 {
   margin-top: -300%;
   margin-left: -70%;
-  font-family: 'Monserat';
+  font-family: "Monserat";
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
-  
+
   color: rgba(0, 0, 0, 0.9);
 }
-.desc1h3{
-  font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-margin-top: -15%;
-font-size: 23px;
-margin-left: -68%;
-line-height: 28px;
-/* identical to box height */
+.desc1h3 {
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  margin-top: -15%;
+  font-size: 23px;
+  margin-left: -68%;
+  line-height: 28px;
+  /* identical to box height */
 
-
-color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.desc2h1{
- 
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 25px;
-line-height: 30px;
-margin-bottom: 1px; ;
-color: rgba(0, 0, 0, 0.9);
+.desc2h1 {
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 1px;
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.desc2h11{
- 
-  font-family: 'Monserat';
+.desc2h11 {
+  font-family: "Monserat";
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
   line-height: 30px;
   margin-bottom: -1%;
   color: rgba(0, 0, 0, 0.9);
-  }
+}
 
-#chart_div{
+#chart_div {
   transition: 0.5s;
 }
 
-.desc2h3{
-  
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-position: absolute;
-font-size: 23px;
-margin-top: 0px;
-margin-left: 1px  ;
-line-height: 28px;
-/* identical to box height */
+.desc2h3 {
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  position: absolute;
+  font-size: 23px;
+  margin-top: 0px;
+  margin-left: 1px;
+  line-height: 28px;
+  /* identical to box height */
 
-
-color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.desc2{
+.desc2 {
   color: black;
   position: absolute;
   font-family: Monserat;
@@ -209,7 +210,7 @@ color: rgba(0, 0, 0, 0.6);
   position: absolute;
   margin-top: -280px;
 }
-.desc1{
+.desc1 {
   color: black;
   position: absolute;
   margin-left: 57%;
@@ -217,47 +218,45 @@ color: rgba(0, 0, 0, 0.6);
   font-size: 30px;
 }
 
-.desc3{
+.desc3 {
   position: absolute;
-    color: black;
-  
+  color: black;
+
   margin-left: 17%;
   font-family: Monserat;
   margin-top: 10%;
-  
 }
 
-.desc3h1{
+.desc3h1 {
   width: 90px;
-height: 36px;
-margin-top: -560px;
-position: absolute;
-margin-left: 900px;
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-line-height: 36px;
-
-color: rgba(0, 0, 0, 0.9);
-}
-
-.desc3h3{
+  height: 36px;
+  margin-top: -560px;
   position: absolute;
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-margin-top: -528px;
-margin-left: 900px;
-font-size: 23px;
-line-height: 28px;
-/* identical to box height */
+  margin-left: 900px;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
 
-
-color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.main_div_errors{
+.desc3h3 {
+  position: absolute;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  margin-top: -528px;
+  margin-left: 900px;
+  font-size: 23px;
+  line-height: 28px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main_div_errors {
   position: absolute;
   transition: 0.5s;
   left: 50%;
@@ -272,49 +271,48 @@ color: rgba(0, 0, 0, 0.6);
   background-color: rgba(249, 249, 249);
 }
 
-.errorh1{
+.errorh1 {
   font-family: Monserat;
   padding: 20px;
   margin-top: -10px;
 }
 
-.mdiv{
+.mdiv {
   height: 50%;
   width: 50%;
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-radius: 3px;
-top: 50%;
-left: 50%;
-margin-left: 20px;
-width: 521px;
-height: 147px;
+  top: 50%;
+  left: 50%;
+  margin-left: 20px;
+  width: 521px;
+  height: 147px;
 }
 
-.mdivh1{
-padding: 20px;
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 22px;
-line-height: 27px;
-/* identical to box height */
+.mdivh1 {
+  padding: 20px;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
 
-
-color: #000000;
+  color: #000000;
 }
 
-.mdivp{
+.mdivp {
   padding: 20px;
   margin-top: -40px;
   font-family: Monserat;
 }
 
 /**/
-#main_div_messages{
+#main_div_messages {
   transition: 0.5s;
 }
 
-.h1m{
+.h1m {
   font-family: Monserat;
   font-size: 30px;
   margin-top: -1px;
@@ -322,7 +320,7 @@ color: #000000;
   margin-left: 3%;
 }
 
-.main_div_messages{
+.main_div_messages {
   transition: 0.5s;
   left: 50%;
   margin-left: 37%;
@@ -335,43 +333,39 @@ color: #000000;
   background-color: rgba(249, 249, 249);
 }
 
-
-
 /**/
 
 /* Ellipse 3 */
 
-.image{
+.image {
   height: 70%;
   margin-top: 20%;
   margin-left: 310%;
 }
 
-.eliplce{
+.eliplce {
   position: absolute;
   width: 80px;
   height: 80px;
-    
-  background: url(../icons/user.png);
 
+  background: url(../icons/user.png);
 }
 
-.name_tag{
+.name_tag {
   position: absolute;
   height: 42px;
   width: 290px;
   padding-left: 1%;
-  
-font-family: Monserat;
-font-style: normal;
-font-weight: 600;
-font-size: 35px;
-line-height: 42px;
 
-color: #000000;
+  font-family: Monserat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 42px;
 
-opacity: 0.8;
-  
+  color: #000000;
+
+  opacity: 0.8;
 }
 
 #circle {
@@ -383,63 +377,58 @@ opacity: 0.8;
   margin-left: 4%;
   width: 109px;
   height: 109px;
- 
+
   background: rgba(0, 0, 0, 0.7);
   border-radius: 39px;
 }
 
-.cirdiv{
+.cirdiv {
   min-height: 200px;
 }
 
-.cir{
+.cir {
   z-index: 9;
   position: absolute;
   margin-top: 30px;
 }
 
-.pod_tg_tag{
+.pod_tg_tag {
   position: absolute;
-width: 200px;
-height: 28px;
+  width: 200px;
+  height: 28px;
 
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 28px;
-/* identical to box height */
-margin-left: 39.5%;
-margin-top: -7%;
-text-align: center;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height */
+  margin-left: 39.5%;
+  margin-top: -7%;
+  text-align: center;
 
-color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
+.pod_circle_tag {
+  position: absolute;
+  width: 189px;
+  height: 40px;
+  margin-left: 39.5%;
+  margin-top: -9%;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  /* identical to box height */
 
+  text-align: center;
 
-.pod_circle_tag{
-  
-  
-position: absolute;
-width: 189px;
-height: 40px;
-margin-left: 39.5%;
-margin-top: -9%;
-font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 33px;
-line-height: 40px;
-/* identical to box height */
-
-text-align: center;
-
-color: rgba(0, 0, 0, 0.9);
-
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.strel{
+.strel {
   height: 150%;
   width: 10%;
   margin-left: 23%;
@@ -449,41 +438,40 @@ color: rgba(0, 0, 0, 0.9);
   width: 12px;
   height: 70px;
 
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-radius: 12px;
   transform: rotate(-45deg);
-  
 }
 
-.dot2{
+.dot2 {
   height: 20%;
   width: 95%;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.dot1{
+.dot1 {
   margin-top: 380%;
   height: 50%;
-  
+
   width: 110%;
   background-color: rgb(255, 248, 235);
 }
 
 .bg-fon {
-  background-color:rgba(0,0,0,.3);
-  height:100%;
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
-#map_handler{
+#map_handler {
   transition: 0.5s;
 }
 
-.map_handler{
+.map_handler {
   position: absolute;
   border-radius: 0px;
   transition: 0.5s;
@@ -495,87 +483,85 @@ color: rgba(0, 0, 0, 0.9);
   background-color: #212121c9;
 }
 
-.map_handler:hover{
+.map_handler:hover {
   border-radius: 0px;
   box-shadow: 0 0 30px #212121ea;
   background-color: #212121ea;
 }
 
-.desc4{
+.desc4 {
   position: absolute;
   margin-left: 49%;
   margin-top: -9.4%;
 }
 
-.desc4h1{
+.desc4h1 {
   position: absolute;
-  font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-width: 200px;
-line-height: 36px;
-text-align: right;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  width: 200px;
+  line-height: 36px;
+  text-align: right;
 
-color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.desc4h3{
+.desc4h3 {
   position: absolute;
-margin-top: 55px;
-  font-family: 'Monserat';
-font-style: normal;
-width: 239px;
-margin-left: -10px;
-height: 28px;
-font-weight: 600;
-font-size: 23px;
-line-height: 28px;
-/* identical to box height */
+  margin-top: 55px;
+  font-family: "Monserat";
+  font-style: normal;
+  width: 239px;
+  margin-left: -10px;
+  height: 28px;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 28px;
+  /* identical to box height */
 
-text-align: right;
+  text-align: right;
 
-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
-
-
 
 /*MAP UNIT PAGE*/
 /*MAP UNIT PAGE*/
 
-.desc5{
+.desc5 {
   position: absolute;
   margin-left: 50.5%;
   margin-top: -15%;
 }
 
-.desc5h1{
+.desc5h1 {
   position: absolute;
-  font-family: 'Monserat';
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-width: 200px;
-line-height: 36px;
-text-align: right;
+  font-family: "Monserat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  width: 200px;
+  line-height: 36px;
+  text-align: right;
 
-color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.desc5h3{
+.desc5h3 {
   position: absolute;
-margin-top: 55px;
-  font-family: 'Monserat';
-font-style: normal;
-width: 239px;
-margin-left: -100px;
-height: 28px;
-font-weight: 600;
-font-size: 23px;
-line-height: 28px;
-/* identical to box height */
+  margin-top: 55px;
+  font-family: "Monserat";
+  font-style: normal;
+  width: 239px;
+  margin-left: -100px;
+  height: 28px;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 28px;
+  /* identical to box height */
 
-text-align: right;
+  text-align: right;
 
-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
