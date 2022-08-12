@@ -37,15 +37,31 @@
 
   <div class="main_div_description" id="main_div_description">
     <!--description: direction, speed, work time, type-->
-    <div id="circle"><div class="strel"></div></div></div>
-    <div class="pod_circle"><span class="pod_circle_tag">45%  |  135°</span></div>
-    <div class="pod_tg_tag"><span class="pod_tg_tag_tag" >irrigation percentage</span></div>
+    
+    <div id="like_button_container"></div>
+ 
+    <!-- direction -->
+    <div id="circle"><div class="strel" id="strelka"></div></div></div>
+
+    <!-- direction text -->
+    <div class="pod_circle"><span class="pod_circle_tag" id="dg">163°</span></div>
+    <div class="pod_tg_tag"><span class="pod_tg_tag_tag" >direction degree</span></div>
+    
+    <!-- speed -->
     <div id="desc1" class="desc1"><h1 id="ms" class="desc1h1">1.203 m\s</h1><h3 class="desc1h3">speed</h3></div>
-    <div id="desc2" class="desc2"><h1 class="desc2h1" id="desc2h1">lon: 56.8954</h1><h1 class="desc2h1">len: 76.8927</h1><h3 class="desc2h3">position</h3></div>
-    <div id="desc3" class="desc3"><h1 class="desc3h1">8 mm</h1><h3 class="desc3h3">regular</h3></div>
-    <div id="desc4" class="desc4"><h1 class="desc4h1" id="desk4h1">6.432 bar</h1><h3 class="desc4h3">water pressure</h3></div>
+    
+    <!-- coordinates -->
+    <div id="desc2" class="desc2"><h1 class="desc2h1" id="desc2h1">lon: 56.8954</h1><h1 class="desc2h1" id="desc2h11">len: 76.8927</h1><h3 class="desc2h3">position</h3></div>
+    
+    <!-- water pressure -->
+    <div id="desc3" class="desc3"><h1 class="desc3h1"id="mm">8 mm</h1><h3 class="desc3h3">regular</h3></div>
+    <div id="desc4" class="desc4"><h1 class="desc4h1" id="pressure">6.432 bar</h1><h3 class="desc4h3">water pressure</h3></div>
+    
+    <!-- waterin persentage -->
     <div id="chart_div" class="chart_div" ></div>
-    <div id="desc5" class="desc5"><h1 class="desc5h1">3h 34m 03s</h1><h3 class="desc5h3">work time</h3></div>
+    
+    <!-- work time -->
+    <div id="desc5" class="desc5"><h1 class="desc5h1" id="time">3h 34m 03s</h1><h3 class="desc5h3">work time</h3></div>
   </div>
 
   <div class="main_div_messages" id="main_div_messages">
@@ -53,19 +69,29 @@
     <div class="mdiv" id="mdiv">
       <h1 class="mdivh1">Start</h1> 
       <p class="mdivp">Kazanka 7-1 started watering the area</p>
-    </div>
-    <!--messages: comments--> 
+    </div> 
   </div>
 
   <div class="main_div_errors" id="main_div_errors">
     <h1 class="errorh1">Errors:</h1>
-    <!--messages: comments--> 
+    <!-- comments --> 
   </div>
 </div>
 
+<!-- fetch json -->
+<script src="../js/fetch.js"></script>
+
+<!-- examply changin char values  -->
 <script src="../js/changeChart.js"></script>
 
+<!-- panel js script connect -->
 <script src="../js/panel.js"></script>
+
+<!-- map api file connect -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"defer></script>
+<!-- Загрузим React. -->
+
+<script src="../js/values.js"></script>
+<script type="module" src="../js/import.js"></script>
 </body>
 </html> 

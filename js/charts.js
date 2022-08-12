@@ -40,7 +40,3 @@ google.charts.load('current', {'packages':['corechart']});
     }
 
 
-
-    setInterval(() => {
-      ms.textContent = randint(1200, 1250) + "m/s"
-    }, 2000)

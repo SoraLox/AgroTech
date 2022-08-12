@@ -1,6 +1,19 @@
-lat = 55.91366590002343;
-lon = 49.284886150709525;
-alt = 96.3069;
+//lat = 55.91366590002343
+//lon = 49.284886150709525;
+//alt = 96.3069;
+
+
+fetch("../json/test.json")
+  .then(function(resp) {
+    return resp.json();
+  })
+  .then(function(data) {
+    lat = data.current.geo0.lat;
+    lon = data.current.geo0.lon;
+    alt = data.current.geo0.alt;
+  
+
+    console.log(lon)
 radius = (59.004496608029584 - lat) * 2;
 
 const citymap = {
@@ -36,3 +49,4 @@ function initMap() {
 }
 
 window.initMap = initMap;
+});

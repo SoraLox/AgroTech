@@ -13,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
         print("Connection failed")
   
 def on_message(client, userdata, message):
-    f = open('jsondata.txt', 'w+')
+    f = open('jsondata.json', 'w+')
     
     print("Message received: "  + message.payload.decode("utf-8") )
     
@@ -53,4 +53,5 @@ except KeyboardInterrupt:
     print("exiting")
     client.disconnect()
     client.loop_stop()
+    
     
