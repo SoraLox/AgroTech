@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqttClient
 import time
 import ssl
+import nothing
 
 
 def on_connect(client, userdata, flags, rc):
@@ -26,7 +27,7 @@ Connected = False
 broker_address= "mqtt.cloud.yandex.net"
 port = 8883
 icluser = "aresmv64htqk8lkmqr61"
-iclinno = "ICLinnocamp2022"
+iclinno = nothing.nothing
 
 client = mqttClient.Client("Python")
 client.username_pw_set(icluser, iclinno=iclinno)
