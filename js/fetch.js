@@ -1,4 +1,4 @@
-fetch("../json/test.json")
+fetch("../json/jsondata.json")
   .then(function(resp) {
     return resp.json();
   })
