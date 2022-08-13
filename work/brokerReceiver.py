@@ -13,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
         print("Connection failed")
   
 def on_message(client, userdata, message):
-    f = open('jsondata.json', 'w+')
+    f = open('../json/jsondata.json', 'w+')
     
     print("Message received: "  + message.payload.decode("utf-8") )
     
